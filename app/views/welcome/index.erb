@@ -1,0 +1,11 @@
+
+<%= form_with url: root_path(),  data: {'turbo-confirm': "Are you sure you want to submit this form?"},
+              html: { style: "display: inline-block;"}, method: :delete do |f| %>
+  <%= f.submit "Delete".html_safe, class: "delete-apple-button btn btn-primary btn-sm" %>
+<% end %>
+
+
+<br />
+<%= turbo_frame_tag "apples-list"   do %>
+  nothing has happened yet
+<% end %>
